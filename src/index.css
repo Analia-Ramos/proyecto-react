@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/*  NAVBAR */
+
+nav{
+  height: 100px;
+  color: white;
+  background-color: #f6d0db;
+}
+
+form{
+  width: 30%;
+}
+
+.navbar-brand{
+  width: 30%;
+}
+
+.banner{
+  width: 100vh;
+}
+
+.imgCarousel{
+  height: 50%;
+}
+
+/*  Item list container */
+.greet{
+  height: 200px;
+  padding: 50px;
+  text-align: center;
+  color: #f36d93;
+  background-color:#f6d0db;
+}
