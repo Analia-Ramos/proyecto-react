@@ -1,17 +1,28 @@
-import React from 'react'
-import Navbar from './Navbar/Navbar'
-import Banner from './Banner/Banner'
-import {ItemListContainer} from './ItemListContainer/ItemListContainer'
+import React, {useState} from 'react';
+import {BrowserRouter} from "react-router-dom";
+import Navbar from './Navbar/Navbar';
+import Banner from './Banner/Banner';
+import Footer from './Footer/Footer';
+import AppRoutes from '../AppRoutes';
+
 
 
 const Landing = () => {
+
+    const [search, setSearch] = useState("")
+
     return (
     <>
-        <Navbar/>
-        <Banner/>
-        <ItemListContainer greeting={"The most lovely and cute mugs coming soon!"}/>
+        <BrowserRouter> 
+
+            <Navbar setSearch={setSearch}/>
+            <Banner/>
+            <AppRoutes/>
+            <Footer/>
+
+        </BrowserRouter>
     </>
-    )
+    );
 }
 
 export default Landing

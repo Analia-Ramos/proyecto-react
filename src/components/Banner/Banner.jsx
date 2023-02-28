@@ -1,43 +1,55 @@
 import React from 'react'
-import hechoamano from '../images/hecho-a-mano.JPG'
-import taza1 from '../images/taza1.jpg'
-import headerImg from '../images/header-img.jpg'
+import Carousel from 'react-bootstrap/Carousel';
+import './Banner.css'
+import banner1 from '../images/banner1.JPG';
+import banner2 from '../images/banner2.jpg';
+import banner3 from '../images/banner3.jpg';
+
+
 
 const Banner = () => {
     return (
     <>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="d-block w-100 height:200px imgCarousel" src={hechoamano} alt="First slide"/>
-            <div class="carousel-caption d-none d-md-block">
-                <h2>Handmade mugs</h2>
-                <p>made with Love</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100  imgCarousel" src={taza1} alt="Second slide"/>
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100 imgCarousel" src={headerImg} alt="Third slide"/>
-        </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
-    
+
+<Carousel>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner1}
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>Handmade Mugs</h3>
+          <p>Made with Love</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner2}
+          alt="Second slide"
+        />
+        <Carousel.Caption>
+          <h3>Handmade Mugs</h3>
+          <p>Made with Love</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner3}
+          alt="Third slide"
+        />
+        <Carousel.Caption>
+          <h3>Handmade Mugs</h3>
+          <p>Made with Love</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
     </>
+
     )
 }
 

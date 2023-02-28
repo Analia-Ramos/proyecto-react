@@ -1,0 +1,22 @@
+nav{
+    height: 150px;
+    color: white;
+    background-color: #f6d0db;
+    font-size: 20px;
+  }
+  
+  form{
+    width: 30%;
+  }
+  
+  .navbar-brand{
+    width: 30%;
+  }
+
+.FontAwesomeIcon{
+    height: 50%;
+}
+
+.NavDropDown.Item{
+    color: #f6d0db;
+}
