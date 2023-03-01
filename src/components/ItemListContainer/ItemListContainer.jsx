@@ -3,6 +3,7 @@ import './ItemListContainer.css'
 import Item from './Item';
 import {products} from './Products';
 import {useParams} from 'react-router-dom';
+import Banner from '../Banner/Banner'
 
 
 export const ItemListContainer = () =>{
@@ -14,8 +15,8 @@ export const ItemListContainer = () =>{
   useEffect(() => {
     const getData = new Promise (resolve => {
       setTimeout(() =>{
-          resolve({products});
-      },3000);
+          resolve(products);
+      },1000);
     });
 
     if (categoryId) {
@@ -29,9 +30,8 @@ export const ItemListContainer = () =>{
 
   return(
 <> 
-
+    { !categoryId && <Banner/>}
     <Item data={data}/>
-
 
 </>   
 

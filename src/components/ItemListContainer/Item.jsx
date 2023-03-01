@@ -1,17 +1,18 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import ItemCount from './ItemCount';
-import {products} from './Products';
+import MyVerticallyCenteredModal from './Modal';
 
 
 
-const Item = () => {
+const Item = ({data}) => {
+
+  const [modalShow, setModalShow] = React.useState(false);
+
   return (
     
-
 <div className='Card'>
-{products.map ((products) =>
+{data.map ((products) =>
     <Card style={{ width: '30rem' }} className= "CardContainer">
         <Card.Img variant="top" src={products.image}/>
         <Card.Body>
@@ -20,10 +21,12 @@ const Item = () => {
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
             </Card.Text>
-    
-        <ItemCount/>
 
-        <Button className='custom-btn' variant="outline-light">Buy Now</Button>
+            <Button className='custom-btn' variant="outline-light" onClick={() => setModalShow(true)}>See More</Button>
+
+            <MyVerticallyCenteredModal
+            show={modalShow}
+            onHide={() => setModalShow(false)}/>
 
         </Card.Body>
     </Card>

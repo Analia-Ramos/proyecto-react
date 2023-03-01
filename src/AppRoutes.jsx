@@ -8,9 +8,7 @@ const AppRoutes = () => {
     return (
     <Routes>
 
-        <Route exact path="/itemlistcontainer" element={<ItemListContainer/>} />
-        <Route exact path="/category/:categoryId" element={<ItemListContainer/>} />
-        <Route exact path="/category/:categoryId" element={<ItemListContainer/>} />
+        <Route exact path="/" element={<ItemListContainer/>} />
         <Route exact path="/category/:categoryId" element={<ItemListContainer/>} />
         <Route exact path="/cartwidget" element={<CartWidget/>} />
 

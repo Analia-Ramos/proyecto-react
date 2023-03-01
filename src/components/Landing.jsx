@@ -1,10 +1,8 @@
 import React, {useState} from 'react';
 import {BrowserRouter} from "react-router-dom";
 import Navbar from './Navbar/Navbar';
-import Banner from './Banner/Banner';
 import Footer from './Footer/Footer';
 import AppRoutes from '../AppRoutes';
-
 
 
 const Landing = () => {
@@ -16,7 +14,6 @@ const Landing = () => {
         <BrowserRouter> 
 
             <Navbar setSearch={setSearch}/>
-            <Banner/>
             <AppRoutes/>
             <Footer/>
 

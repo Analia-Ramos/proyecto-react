@@ -40,15 +40,15 @@ const Navbar = (props) => {
 
     <Link to="/itemlistcontainer" style={{color:"white", textDecoration: "none"}}>
     <NavDropdown title="Our Products" id="basic-nav-dropdown">
-              <NavLink to='/category/:mugs'> 
+              <NavLink to='/category/mug' style={{color:"white", textDecoration: "none"}}> 
                 <NavDropdown.Item href="#action/3.1">Mugs</NavDropdown.Item> 
               </NavLink>
 
-              <NavLink to='/category/:candleholders'> 
+              <NavLink to='/category/candleholder' style={{color:"white", textDecoration: "none"}}> 
               <NavDropdown.Item href="#action/3.2">Candle Holders</NavDropdown.Item>
               </NavLink>
 
-              <NavLink to='/category/:bowls'> 
+              <NavLink to='/category/bowl' style={{color:"white", textDecoration: "none"}}> 
               <NavDropdown.Item href="#action/3.3">Bowls</NavDropdown.Item>
               </NavLink>
 

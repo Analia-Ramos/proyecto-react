@@ -5,7 +5,6 @@ const ItemCount = () => {
 
     const [count, setCount] = useState(0);
 
-
   return (
     <div className='countBtn'> 
     <Button onClick={() => setCount(count - 1)} className='custom-btn' variant="outline-light"> - </Button>
