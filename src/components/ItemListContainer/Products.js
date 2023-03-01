@@ -9,6 +9,7 @@ import kittymug from "../images/kitty-mug.jpg";
 import pinkmug from "../images/pink-mug.jpg";
 import lilacmug from "../images/lilac-mug.jpg";
 import ushaped from "../images/u-shaped-candleholder.jpg";
+import rawshaped from "../images/u-shaped-candleholder.jpg";
 
 
 export const products = [
@@ -22,7 +23,7 @@ export const products = [
   },
   { 
     id: 2,
-    text: "Blue Dotted",
+    text: "Blue Dotted Mug",
     image: bluedotted,
     price: 35,
     category: "mug",
@@ -38,7 +39,7 @@ export const products = [
   },
   { 
     id: 4,
-    text: "Pink Dotted",
+    text: "Pink Dotted Mug",
     image: pinkdotted,
     price: 35,
     category: "mug",
@@ -54,7 +55,7 @@ export const products = [
   },
   { 
     id: 6,
-    text: "Mermaid",
+    text: "Mermaid Mug",
     image: mermaidmug,
     price: 40,
     category: "mug",
@@ -87,7 +88,7 @@ export const products = [
 
   { 
     id: 10,
-    text: "Lilac",
+    text: "Lilac Mug",
     image: lilacmug,
     price: 35,
     category: "mug",
@@ -96,9 +97,21 @@ export const products = [
 
   { 
     id: 11,
-    text: "U Shaped",
+    text: "U-Shaped Candle Holder",
     image: ushaped,
     price: 25,
     category: "candleholder",
+    detail: "Sizes: height 5cm x width 6.5cm. Each piece is handcrafted and hand poured as a result no two pieces are alike."
   },
+
+  { 
+    id: 12,
+    text: "Raw Candle Holder",
+    image: rawshaped,
+    price: 22,
+    category: "candleholder",
+    detail: "Diameter 12cm. Each piece is handcrafted and hand poured as a result no two pieces are alike."
+  },
+
+
 ];
