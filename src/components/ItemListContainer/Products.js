@@ -204,7 +204,7 @@ export const products = [
 
   { 
     id: 22,
-    text: "white & Raw Bowl",
+    text: "White & Raw Bowl",
     image: whiterawbowl,
     price: 18,
     category: "bowl",

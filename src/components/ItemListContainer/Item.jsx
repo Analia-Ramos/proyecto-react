@@ -2,7 +2,8 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import MyVerticallyCenteredModal from './Modal'; 
-
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
 
 
 
@@ -14,6 +15,8 @@ const Item = ({data}) => {
     
 <div className='Card'>
 {data.map ((products) =>
+    <Container fluid>
+    <Row>
     <Card style={{ width: '30rem' }} className= "CardContainer">
         <Card.Img variant="top" src={products.image}/>
         <Card.Body>
@@ -32,6 +35,8 @@ const Item = ({data}) => {
         </Card.Body>
     </Card>
 
+    </Row>
+    </Container>
 )}
 </div>
     
