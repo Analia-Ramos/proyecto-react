@@ -7,13 +7,13 @@ import ItemCount from './ItemCount';
 function MyVerticallyCenteredModal({show, onHide, products,}) {
   return (
     <Modal
-      show 
+      show={show}
       onHide
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header closeButton>
+      <Modal.Header>
         <Modal.Title id="contained-modal-title-vcenter">
           {products.text}
         </Modal.Title>
@@ -27,7 +27,7 @@ function MyVerticallyCenteredModal({show, onHide, products,}) {
       </Modal.Body>
 
       <Modal.Footer>
-        <Button className='custom-btn' variant="outline-light" onClick={onHide}>Close</Button>
+        <Button className='custom-btn' variant="outline-light" onClick={()=>onHide(false)}>Close</Button>
       </Modal.Footer>
     </Modal>
   );
