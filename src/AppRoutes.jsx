@@ -1,5 +1,6 @@
 import React from 'react';
 import {Routes, Route} from "react-router-dom";
+import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
 
 
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
@@ -13,6 +14,7 @@ const AppRoutes = () => {
         <Route exact path="/" element={<ItemListContainer/>} />
         <Route exact path="/category/:categoryId" element={<ItemListContainer/>} />
         <Route exact path="/cartwidget" element={<CartWidget/>} />
+        <Route exact path="/itemdetailcontainer" element={<ItemDetailContainer/>} />
 
     </Routes>
     )

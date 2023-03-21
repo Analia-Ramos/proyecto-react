@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react';
 import { Link , NavLink } from "react-router-dom";
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Nav from 'react-bootstrap/Nav';
 import './Navbar.css';
 import logo from '../images/logo.png';
 import CartWidget from './CartWidget';
@@ -11,58 +12,44 @@ import { faHouse, faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = (props) => {
 
-  const [value, setValue] = useState("")
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    props.setSearch(value);
-  }
-
-  const handleChange = (event) => {
-    setValue(event.target.value)
-  }
 
     return (
         <>
 
-<nav className="navbar">
-  <div className="container-fluid  justify-content-around">
+  <Nav className="justify-content-center logo">
     <div className="navbar-brand" href="#">
       <NavLink to="/"> 
-      <img src= {logo} alt="" width="350" height="90" class="d-inline-block"/>
+      <img src= {logo} alt="" width="400" height="150" class="d-inline-block"/>
       </NavLink>
     </div>
+  </Nav>
 
-    <form onSubmit={handleSubmit} className="d-flex" role="search">
-        <input value={value} onChange={handleChange} className="form-control me-2" type="search" placeholder="What are you looking for?" aria-label="Search"/>
-        <button className="btn btn-outline-light" type="submit">Search</button>
-    </form>
 
-    <Link to="/itemlistcontainer" style={{color:"white", textDecoration: "none"}}>
+<Nav className="justify-content-end navbar">  
+    <Link to="/itemlistcontainer" style={{color:"pink", textDecoration: "none"}}>
     <NavDropdown title="Our Products" id="basic-nav-dropdown">
-              <NavLink to='/category/mug' style={{color:"white", textDecoration: "none"}}> 
+              <NavLink to='/category/mug' style={{color:"pink", textDecoration: "none"}}> 
                 <NavDropdown.Item href="#action/3.1">Mugs</NavDropdown.Item> 
               </NavLink>
 
-              <NavLink to='/category/candleholder' style={{color:"white", textDecoration: "none"}}> 
+              <NavLink to='/category/candleholder' style={{color:"pink", textDecoration: "none"}}> 
               <NavDropdown.Item href="#action/3.2">Candle Holders</NavDropdown.Item>
               </NavLink>
 
-              <NavLink to='/category/bowl' style={{color:"white", textDecoration: "none"}}> 
+              <NavLink to='/category/bowl' style={{color:"pink", textDecoration: "none"}}> 
               <NavDropdown.Item href="#action/3.3">Bowls</NavDropdown.Item>
               </NavLink>
-
     </NavDropdown>
     </Link>
 
-    <NavLink to="/" className="nav-link active fs-5 Icon" aria-current="page"><FontAwesomeIcon icon={faHouse}/></NavLink>
-    <NavLink to="/user" className="nav-link fs-5 Icon" ><FontAwesomeIcon icon={faUser}/></NavLink>
-    <NavLink to="/cartwidget" style={{color:"white", textDecoration: "none"}}> <CartWidget/> </NavLink>  
+    <NavLink to="/" className="nav-link active fs-5 Icon" aria-current="page"style={{color:"pink", textDecoration: "none"}}><FontAwesomeIcon icon={faHouse}/></NavLink>
+    <NavLink to="/user" className="nav-link fs-5 Icon" style={{color:"pink", textDecoration: "none"}}><FontAwesomeIcon icon={faUser}/></NavLink>
+    <NavLink to="/cartwidget" style={{color:"pink", textDecoration: "none"}}><CartWidget/></NavLink>  
+</Nav>
 
-  </div>
-</nav>
 
-        </>
+
+      </>
     )
 }
 

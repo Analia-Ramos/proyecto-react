@@ -1,16 +1,17 @@
-import React from 'react'
+import React from 'react';
+import './Footer.css';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import muglogo from '../images/mug-logo-rb.png';
+import footerlogo from '../images/footer.png';
 
 
 const Footer = () => {
   return (
     
-    <Navbar>
+    <Navbar className='justify-content-center footer'>
       <Container>
-        <img src={muglogo} alt="" width="80" height="70"/>
-        <Navbar.Brand href="#home">Chulita Mugs - 2023</Navbar.Brand>
+        <img src={footerlogo} alt="" width="100" height="90"/>
+        <Navbar.Brand href="#home">2023</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>

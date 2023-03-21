@@ -1,37 +1,27 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import MyVerticallyCenteredModal from './Modal'; 
+import {Link} from "react-router-dom";
+import './ItemListContainer.css'
 
 
 const Item = ({data}) => {
 
-  const [modalShow, setModalShow] = React.useState(false);
-
   return (
     
 <div className='Card'>
-{data.map ((products) =>
-
-    <Card style={{ width: '30rem' }} className= "CardContainer">
-        <Card.Img variant="top" src={products.image}/>
+  {data.map ((items) =>
+    <Card style={{ width: '30rem' }} className= "CardContainer justify-content-center">
+        <Card.Img variant="top" src={items.image}/>
         <Card.Body>
-            <Card.Title>{products.text}</Card.Title>
-            <Card.Text> ${products.price}
-            </Card.Text>
-
-            <Button className='custom-btn' variant="outline-light" onClick={() => setModalShow(true)}>See More</Button>
-
-            <MyVerticallyCenteredModal
-            show={modalShow}
-            onHide={() => setModalShow(false)}
-            products={products}
-            />
-
+            <Card.Title>{items.title}</Card.Title>
+            <br/>
+            <Link to='/itemdetailcontainer'>
+              <Button className='custom-btn' variant="outline-light">See More</Button>
+            </Link>
         </Card.Body>
     </Card>
-
-)}
+  )}
 </div>
     
   )

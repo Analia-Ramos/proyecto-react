@@ -1,37 +1,37 @@
 import React, { useState ,useEffect } from 'react';
-import './ItemListContainer.css'
 import Item from './Item';
-import {products} from './Products';
-import {useParams} from 'react-router-dom';
-import Banner from '../Banner/Banner'
+import { useParams } from 'react-router-dom';
+import { getDocs, getFirestore, collection, query, where} from 'firebase/firestore';
+
+
 
 
 export const ItemListContainer = () =>{
 
   const [data, setData] = useState([]);
-
-  const {categoryId} = useParams();
-
+  const {categoriaId} = useParams();
+  
   useEffect(() => {
-    const getData = new Promise (resolve => {
-      setTimeout(() =>{
-          resolve(products);
-      },1000);
-    });
+    const querydb = getFirestore();
+    const queryCollection = collection(querydb, 'items');
 
-    if (categoryId) {
-      getData.then(res => setData(res.filter(products => products.category === categoryId)));
+    if(categoriaId) {
+      const queryFilter = query(queryCollection, where('category', '==', categoriaId ))
+      getDocs(queryFilter)
+      .then(res => setData (res.docs.map(product => ({id: product.id, ...product.data() }))))
     } else {
-      getData.then(res => setData(res));
+      getDocs(queryCollection)
+      .then(res => setData (res.docs.map(product => ({id: product.id, ...product.data() }))))
     }
-  
-  }, [categoryId])
-  
+
+
+  }, [categoriaId])
+
 
   return(
 <> 
-    { !categoryId && <Banner/>}
-    <Item data={data}/>
+
+    <Item data={data}/> 
 
 </>   
 

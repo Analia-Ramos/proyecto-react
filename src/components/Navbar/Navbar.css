@@ -1,15 +1,15 @@
-nav{
-    height: 150px;
+.navbar{
+    height: 50px;
     color: white;
-    background-color: #f6d0db;
+    background-color: white;
     font-size: 20px;
   }
+
+.logo{
+  background-color: white;
+}
   
-  form{
-    width: 30%;
-  }
-  
-  .navbar-brand{
+.navbar-brand{
     width: 30%;
   }
 

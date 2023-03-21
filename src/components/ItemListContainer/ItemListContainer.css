@@ -1,18 +1,19 @@
 .Card{
     padding-top: 100px;
     padding-bottom: 100px;
-    align-items: center;
-    justify-self: center;
+    margin-left: 20px;
 
 }
 
 .CardContainer{
     margin: 25px;
     text-align: center;
-    display: inline-block;
+    display:inline-flex;
     text-align: center;
     align-items: center;
     justify-self: center;
+    align-content: center;
+
 }
 
 .CardContainer:hover{
