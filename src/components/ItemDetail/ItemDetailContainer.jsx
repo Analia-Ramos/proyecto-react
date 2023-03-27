@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
 
   useEffect (() => {
     const querydb = getFirestore();
-    const queryDoc = doc (querydb, 'items', 'detailId')
+    const queryDoc = doc (querydb, 'items', detailId)
     getDoc(queryDoc)
       .then(res => setData({id: res.id, ...res.data()}))
   }, [detailId])
@@ -19,7 +19,6 @@ const ItemDetailContainer = () => {
 
   return (
     <> 
-
     <ItemDetail data={data}/>
     </>
   )

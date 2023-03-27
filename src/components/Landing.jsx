@@ -1,23 +1,21 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {BrowserRouter} from "react-router-dom";
+import CartProvider from '../Context/CartContext';
 import Navbar from './Navbar/Navbar';
 import Footer from './Footer/Footer';
 import AppRoutes from '../AppRoutes';
 
 
 const Landing = () => {
-
-    const [search, setSearch] = useState("")
-
     return (
     <>
-        <BrowserRouter> 
-
-            <Navbar setSearch={setSearch}/>
+    <BrowserRouter> 
+        <CartProvider>
+            <Navbar/>
             <AppRoutes/>
             <Footer/>
-
-        </BrowserRouter>
+        </CartProvider>
+    </BrowserRouter>
     </>
     );
 }

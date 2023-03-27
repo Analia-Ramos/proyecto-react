@@ -1,25 +1,30 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import './ItemDetail.css'
-
+import './ItemDetail.css';
+import { CartContext } from '../../Context/CartContext';
+import ItemCount from './ItemCount';
 
 
 const ItemDetail = ({data}) => {
+
+  const{addProduct} = useContext(CartContext);
+
   return (
-
-  <div>
-    <Card style={{ width: '30rem' }}>
+  <div className='container'>
+    <Card style={{ width: '40rem' }} className= "CardContainer cardItem">
       <Card.Img variant="top" src={data.image}/>
-      <Card.Body>
-      <Card.Title> {data.title} </Card.Title>
-      <Card.Text> {data.detail} {data.price}
-      </Card.Text>
-      <Button className='custom-btn' variant="outline-light">Add to Cart</Button>
-      </Card.Body>
     </Card>
-  </div>
 
+    <div>
+    <Card.Title> {data.title} </Card.Title>
+      <Card.Text> {data.detail} </Card.Text>
+      <p className='price'>${data.price}</p>
+      <ItemCount/>
+      <Button className='custom-btn' variant="outline-light" onClick={() => addProduct(data, 1)}>Add to Cart</Button>
+    </div>
+
+  </div>
 );
 }
 

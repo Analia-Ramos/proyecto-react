@@ -4,9 +4,9 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Nav from 'react-bootstrap/Nav';
 import './Navbar.css';
 import logo from '../images/logo.png';
-import CartWidget from './CartWidget';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faHouse, faUser } from '@fortawesome/free-solid-svg-icons';
+import CartWidget from './CartWidget';
 
 
 
@@ -44,11 +44,8 @@ const Navbar = (props) => {
 
     <NavLink to="/" className="nav-link active fs-5 Icon" aria-current="page"style={{color:"pink", textDecoration: "none"}}><FontAwesomeIcon icon={faHouse}/></NavLink>
     <NavLink to="/user" className="nav-link fs-5 Icon" style={{color:"pink", textDecoration: "none"}}><FontAwesomeIcon icon={faUser}/></NavLink>
-    <NavLink to="/cartwidget" style={{color:"pink", textDecoration: "none"}}><CartWidget/></NavLink>  
+    <NavLink to="/cart" style={{color:"pink", textDecoration: "none"}}><CartWidget/></NavLink>  
 </Nav>
-
-
-
       </>
     )
 }

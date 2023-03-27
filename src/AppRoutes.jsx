@@ -1,22 +1,19 @@
 import React from 'react';
 import {Routes, Route} from "react-router-dom";
+import Cart from './components/Cart/Cart';
 import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
-
-
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import CartWidget from './components/Navbar/CartWidget';
+
 
 
 const AppRoutes = () => {
     return (
-    <Routes>
-
-        <Route exact path="/" element={<ItemListContainer/>} />
-        <Route exact path="/category/:categoryId" element={<ItemListContainer/>} />
-        <Route exact path="/cartwidget" element={<CartWidget/>} />
-        <Route exact path="/itemdetailcontainer" element={<ItemDetailContainer/>} />
-
-    </Routes>
+        <Routes>
+            <Route exact path="/" element={<ItemListContainer/>} />
+            <Route exact path="/category/:categoryId" element={<ItemListContainer/>} />
+            <Route exact path="/cart" element={<Cart/>} />
+            <Route exact path="/item/:detailId" element={<ItemDetailContainer/>} />
+        </Routes>
     )
 }
 

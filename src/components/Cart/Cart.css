@@ -1,0 +1,14 @@
+.emptyCart{
+    text-align: center;
+    font-size: 30px;
+    color: #f36d93;
+    margin: 100px;
+}
+.imgEmptyCart{
+    height: 200px;
+    width: 200px;
+}
+:checked {
+    margin-left: 25px;
+    border: 1px solid #f36d93;
+    }

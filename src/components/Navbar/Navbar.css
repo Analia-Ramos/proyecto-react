@@ -3,6 +3,7 @@
     color: white;
     background-color: white;
     font-size: 20px;
+    margin-bottom: 100px;
   }
 
 .logo{
@@ -19,4 +20,12 @@
 
 .NavDropDown.Item{
     color: #f6d0db;
+}
+
+.cartStyle{
+    background-color: #f36d93;
+    border-radius: 50%;
+    padding: 3px 9px;
+    color: white;
+  
 }

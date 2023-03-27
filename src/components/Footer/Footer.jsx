@@ -11,7 +11,7 @@ const Footer = () => {
     <Navbar className='justify-content-center footer'>
       <Container>
         <img src={footerlogo} alt="" width="100" height="90"/>
-        <Navbar.Brand href="#home">2023</Navbar.Brand>
+        <Navbar.Brand>2023</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
