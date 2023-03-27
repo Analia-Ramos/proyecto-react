@@ -6,10 +6,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Features
 
-* Browse ceramics products by category or search by keyword
-* Add products to cart and checkout with Stripe
-* User authentication and authorization with Firebase
-* Dashboard for managing products and orders
+* Browse ceramics products by category
+* Add products to cart 
+* Go to Checkout 
 
 ## Installation 
 
