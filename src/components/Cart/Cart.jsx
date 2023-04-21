@@ -5,6 +5,7 @@ import { CartContext } from '../../Context/CartContext';
 import './Cart.css';
 import CartItems from './CartItems';
 import mugs from "../Assets/Images/mugs.jpg";
+import background from '../Assets/Images/mugs1.JPG';
 import Button from 'react-bootstrap/esm/Button';
 
 const Cart = () => {
@@ -38,14 +39,13 @@ const Cart = () => {
   if (cart.length === 0){
     return(
       <> 
-        <div className='empty-cart'> 
-          <p> Your basket is empty</p> 
-          <Link to="/" style={{color:"pink"}}>
-            <span className='continue-shopping'>Continue shopping</span>  
-          <br />
-          <img src={mugs} alt="" className='img-empty'/>
-          </Link> 
-          
+        <div className='empty-cart box'style={{backgroundImage: `url(${background})`}}> 
+          <div className='box-container container empty-basket'> 
+            <p> Your cart is empty</p> 
+            <Link to="/" style={{color:"pink"}}>
+              <span className='continue-shopping'>Continue shopping</span>  
+            </Link> 
+        </div>
         </div>
       </>
       );
@@ -54,9 +54,8 @@ const Cart = () => {
   return (
     <>
       {
-        cart.map(data=> <CartItems key={data.id} data={data} />)
+        cart.map(data=> <CartItems key={data.id} data={data} handleClick={handleClick}/>)
       }
-      <Button onClick={handleClick} className='custom-btn' variant="outline-light">Finish Shopping</Button>
     </>
   )
 }

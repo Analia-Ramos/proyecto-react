@@ -7,7 +7,7 @@ import background from '../Assets/Images/mugs1.JPG';
 const User = () => {
   return (
     <div className="box" style={{backgroundImage: `url(${background})`}}>
-        <div className='container'>
+        <div className='container box-container'>
             <div className='top-header'>
                 <span className='title'>Have an account?</span>
                 <div className='login'>Login</div>

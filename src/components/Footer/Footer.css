@@ -1,9 +1,7 @@
 .footer{
     height: 200px;
-    background-color: #f5b6c8;
+    background-color: rgba(243, 109, 147, 0.578);
 }
-
-.div1{
-    display: flex;
-    align-items: flex-end;
+.footer-image{
+    margin: 50px;
 }

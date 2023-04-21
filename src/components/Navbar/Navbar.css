@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f7ccd6ec;
+  background-color: rgba(243, 109, 147, 0.578);
 }
 .nav-logo{
   width: 300px;
@@ -12,6 +12,7 @@
 .nav-link{
   color: #1e1d1d;
   font-size: 20px;
+  font-weight: 700;
   text-decoration: none;
   margin-right: 40px;
   margin-left: 40px;
@@ -33,8 +34,10 @@
   background-repeat: no-repeat;
   background-position: center;
   padding-top: 100px;
+  justify-content: center;
+  align-items: center;
 }
-.container{
+.box-container{
   background-color: rgba(243, 109, 147, 0.578);
   display: flex;
   flex-direction: column;

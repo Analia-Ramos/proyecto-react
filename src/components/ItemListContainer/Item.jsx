@@ -5,14 +5,12 @@ import {Link} from "react-router-dom";
 import { CartContext } from '../../Context/CartContext';
 import './ItemListContainer.css';
 
-
 const Item = ({data}) => {
 
   const{addProduct} = useContext(CartContext);
 
   return (
-    
-<div className='cardContainer'>
+<div className='card-container'>
   {data.map ((items) =>
     <Card style={{ width: '30rem' }} className= "cards">
         <Card.Img variant="top" src={items.image}/>

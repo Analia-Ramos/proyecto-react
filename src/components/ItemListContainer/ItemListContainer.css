@@ -1,7 +1,8 @@
-.cardContainer{
+.card-container{
     padding: 100px 0 60px 0px;
     margin-left: 40px;
     align-items: center;
+    justify-content: center;
 }
 .cards{
     margin: 25px;
