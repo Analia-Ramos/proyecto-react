@@ -1,22 +1,27 @@
+.title{
+    font-size: 25px;
+}
 .custom-btn{
+    margin: 20px;
     background-color: #f36d93;
     align-items: center;
     justify-content: center;
 }
-.cardItem{
-    flex-direction: row;
-    justify-content: center;
-    
-}
 .price{
-    font-size: 20px;
+    font-size: 25px;
 }
-.countBtn{
+.countBtns{
     display:flex;
     align-items: center;
     justify-content: center;
 }
-.itemCount{
-    margin: 15px;
+.count-btn{
+    background-color:#f36d93;
 }
-
+.itemCount{
+    margin: 10px;
+}
+.cart-btn{
+    color:#f36d93;
+    font-weight: bolder;
+}

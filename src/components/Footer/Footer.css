@@ -1,4 +1,9 @@
 .footer{
-    height: 150px;
-    background-color: #f6d0db;
+    height: 200px;
+    background-color: #f5b6c8;
+}
+
+.div1{
+    display: flex;
+    align-items: flex-end;
 }

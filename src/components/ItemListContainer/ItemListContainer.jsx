@@ -1,5 +1,6 @@
 import React, { useState ,useEffect } from 'react';
 import Item from './Item';
+import Banner from '../Banner/Banner';
 import { useParams } from 'react-router-dom';
 import { getDocs, getFirestore, collection, query, where} from 'firebase/firestore';
 
@@ -26,9 +27,9 @@ export const ItemListContainer = () =>{
 
   return(
 <> 
+  { !categoryId && <Banner /> }
     <Item data={data}/> 
 </>   
-
   )
 }
 

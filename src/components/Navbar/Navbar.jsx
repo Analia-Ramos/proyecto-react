@@ -1,51 +1,42 @@
 import React from 'react';
 import { Link , NavLink } from "react-router-dom";
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Nav from 'react-bootstrap/Nav';
-import './Navbar.css';
-import logo from '../images/logo.png';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faHouse, faUser } from '@fortawesome/free-solid-svg-icons';
 import CartWidget from './CartWidget';
+import logo from '../Assets/Images/logo1.png';
+import './Navbar.css';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
+const Navbar = () => {
 
-
-const Navbar = (props) => {
 
 
     return (
         <>
-
-  <Nav className="justify-content-center logo">
-    <div className="navbar-brand" href="#">
-      <NavLink to="/"> 
-      <img src= {logo} alt="" width="400" height="150" class="d-inline-block"/>
-      </NavLink>
-    </div>
-  </Nav>
-
-
-<Nav className="justify-content-end navbar">  
-    <Link to="/itemlistcontainer" style={{color:"pink", textDecoration: "none"}}>
-    <NavDropdown title="Our Products" id="basic-nav-dropdown">
-              <NavLink to='/category/mug' style={{color:"pink", textDecoration: "none"}}> 
+<div className="navbar">
+  <NavLink to="/"> 
+    <img src={logo} className="nav-logo"></img>
+  </NavLink>
+    <div className='nav-items'>
+    <NavLink to="/" className="nav-link active fs-5" aria-current="page">Home</NavLink>
+    <NavLink to="/user" className="nav-link active fs-5" aria-current="page">Log In</NavLink>
+    <Link to="/itemlistcontainer">
+    <NavDropdown title="Products" id="basic-nav-dropdown" className="nav-link products">
+              <NavLink to='/category/mug' style={{textDecoration: "none"}}> 
                 <NavDropdown.Item href="#action/3.1">Mugs</NavDropdown.Item> 
               </NavLink>
-
-              <NavLink to='/category/candleholder' style={{color:"pink", textDecoration: "none"}}> 
-              <NavDropdown.Item href="#action/3.2">Candle Holders</NavDropdown.Item>
+              <NavLink to='/category/candleholder' style={{textDecoration: "none"}}> 
+                <NavDropdown.Item href="#action/3.2">Candle Holders</NavDropdown.Item>
               </NavLink>
-
-              <NavLink to='/category/bowl' style={{color:"pink", textDecoration: "none"}}> 
-              <NavDropdown.Item href="#action/3.3">Bowls</NavDropdown.Item>
+              <NavLink to='/category/bowl' style={{textDecoration: "none"}}> 
+                <NavDropdown.Item href="#action/3.3">Bowls</NavDropdown.Item>
+              </NavLink>
+              <NavLink to='/category/plate' style={{textDecoration: "none"}}> 
+                <NavDropdown.Item href="#action/3.3">Plates</NavDropdown.Item>
               </NavLink>
     </NavDropdown>
     </Link>
-
-    <NavLink to="/" className="nav-link active fs-5 Icon" aria-current="page"style={{color:"pink", textDecoration: "none"}}><FontAwesomeIcon icon={faHouse}/></NavLink>
-    <NavLink to="/user" className="nav-link fs-5 Icon" style={{color:"pink", textDecoration: "none"}}><FontAwesomeIcon icon={faUser}/></NavLink>
-    <NavLink to="/cart" style={{color:"pink", textDecoration: "none"}}><CartWidget/></NavLink>  
-</Nav>
+    <NavLink to="/cart" className="nav-link active fs-5" aria-current="page"><CartWidget/></NavLink>
+      </div>
+</div>
       </>
     )
 }

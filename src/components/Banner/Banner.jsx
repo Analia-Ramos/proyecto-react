@@ -1,10 +1,10 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import './Banner.css'
-import banner1 from '../images/banner1.JPG';
-import banner2 from '../images/banner2.jpg';
-import banner3 from '../images/banner3.jpg';
-import banner4 from '../images/banner4.jpg';
+import banner1 from '../Assets/Images/banner1.jpg';
+import banner2 from '../Assets/Images/banner2.jpg';
+import banner3 from '../Assets/Images/banner3.jpg';
+import banner4 from '../Assets/Images/banner4.jpg';
 
 
 const Banner = () => {
@@ -19,7 +19,7 @@ const Banner = () => {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>Handmade Mugs</h3>
+          <h2>Handmade Ceramics</h2>
           <p>Made with Love</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -31,7 +31,7 @@ const Banner = () => {
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h3>Handmade Mugs</h3>
+          <h2>Handmade Ceramics</h2>
           <p>Each piece is handcrafted and hand poured as a result no two pieces are alike</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -43,7 +43,7 @@ const Banner = () => {
           alt="Third slide"
         />
         <Carousel.Caption>
-          <h3>Handmade Mugs</h3>
+          <h2>Handmade Ceramics</h2>
           <p>Fill your space with the unmatched beauty</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -55,7 +55,7 @@ const Banner = () => {
           alt="Third slide"
         />
         <Carousel.Caption>
-          <h3>Handmade Mugs</h3>
+          <h2>Handmade Ceramics</h2>
           <p>Each piece is unique and handmade with love</p>
         </Carousel.Caption>
       </Carousel.Item>

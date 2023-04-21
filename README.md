@@ -1,4 +1,4 @@
-# Proyecto React - Coderhouse 
+# React Project - Coderhouse 
 
 This project is a ceramics ecommerce website built with React. The website allows users to browse and purchase ceramics products online.
 
@@ -39,3 +39,4 @@ If you'd like to contribute to this project, please follow these steps:
 * Commit your changes: git commit -am 'Add some feature'.
 * Push to the branch: git push origin my-feature-branch.
 * Submit a pull request.
+

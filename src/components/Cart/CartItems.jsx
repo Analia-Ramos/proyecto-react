@@ -1,9 +1,7 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../../Context/CartContext';
 import { Link } from "react-router-dom";
-import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-
 
 const CartItems = ({data}) => {
     
@@ -11,25 +9,25 @@ const CartItems = ({data}) => {
 
     return (
     <> 
-    <div className='container'>
-        <Card style={{ width: '50rem'}} className="CardContainer">
-        <Card.Img variant="top" src={data.image} />
-            <Card.Body>
-            <Card.Title>{data.title}</Card.Title>
-            <p> Quantity {data.quantity} </p>
-            <p> Price ${data.price} </p>
-            <p> Subtotal ${data.quantity * data.price}</p>
-            <p> Total ${getTotal()} </p>
-            <p>Is your order a gift? <input type="checkbox" className="my-checkbox" checked=""/></p>
-        <Button className='custom-btn' variant="outline-light" onClick={() => removeProduct(data.id)}>Remove</Button>
-        <Link to="/" >
-            <Button className='custom-btn' variant="outline-light"> Continue Shopping </Button>
-        </Link>
-        <Link to="/">
-        <Button className='custom-btn' variant="outline-light"> Checkout </Button>
-        </Link>
-        </Card.Body>
-        </Card>
+    <div className='cart-container'>
+        <div className="cart-items">
+            <p className='title'>Shopping Cart</p>
+            <img variant="top" className='cart-image' src={data.image} />
+            <div>
+            <div className='prod-container'>
+                <p className='prod-title'>{data.title}</p>
+                <p> Quantity {data.quantity} </p>
+                <p> Price ${data.price} </p>
+                <p> Subtotal ${data.quantity * data.price}</p>
+                <p> Total ${getTotal()} </p>
+                <p> Is your order a gift? <input type="checkbox" id="check" className='checkbox'/></p>
+            </div>
+            <Button className='remove-btn' variant="outline-light" onClick={() => removeProduct(data.id)}>Remove</Button>
+            <Link to="/" >
+                <Button className='custom-btn' variant="outline-light"> Continue Shopping </Button>
+            </Link>
+            </div>
+        </div>
     </div>
     </>
     )

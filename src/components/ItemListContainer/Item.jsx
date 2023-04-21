@@ -12,9 +12,9 @@ const Item = ({data}) => {
 
   return (
     
-<div className='Card container'>
+<div className='cardContainer'>
   {data.map ((items) =>
-    <Card style={{ width: '30rem' }} className= "CardContainer ">
+    <Card style={{ width: '30rem' }} className= "cards">
         <Card.Img variant="top" src={items.image}/>
         <Card.Body>
             <Card.Title>{items.title}</Card.Title>
